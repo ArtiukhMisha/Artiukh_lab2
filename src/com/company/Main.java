@@ -16,7 +16,25 @@ public class Main {
 
 
     private static void task24() {
+        Scanner scanner = new Scanner(System.in);
+        double[] points = new double[10];
+        double sum = 0;
+        System.out.println("input points: ");
+        for (int i = 0; i < 10; i++) {
+            points[i]= scanner.nextDouble();
+        }
+        System.out.print("n = ");
+        double n = scanner.nextDouble();
 
+        System.out.println("input points: ");
+        for (int i = 0; i < 10; i++) {
+            sum+=points[i];
+        }
+        if (sum/10>n){
+            System.out.println("SUCCESS");
+        }else {
+            System.out.println("fault");
+        }
     }
 
     /*
