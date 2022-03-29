@@ -49,7 +49,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.print("N = ");
         int N = scanner.nextInt();
-        float[] array = new float[10];
+        float[] array = new float[N];
         float pr = 1;
         System.out.println("input array: ");
         for (int i = 0; i < N; i++) {
@@ -69,7 +69,26 @@ public class Main {
      В случае положительного ответа определить порядковый номер первого из них.
      */
     private static void task74() {
+        System.out.println("task74");
 
+        Scanner scanner = new Scanner(System.in);
+        float[] array = new float[10];
+        byte a = 0;
+        System.out.println("input array: ");
+        for (int i = 0; i < 10; i++) {
+            array[i]=  scanner.nextFloat();
+        }
+        for (int i = 0; i < 10; i++) {
+            if (array[i]<0) {
+                System.out.println("num = " + (i+1));
+                a = 1;
+                return;
+            }
+        }
+        if (a==0){
+            System.out.println("otsutstvuet");
+        }
+        System.out.println();
     }
 
     /*
@@ -95,7 +114,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        task24();
+        //task24();
         task49();
         task74();
         task99();
