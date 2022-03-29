@@ -16,6 +16,7 @@ public class Main {
 
 
     private static void task24() {
+        System.out.println("task24");
         Scanner scanner = new Scanner(System.in);
         double[] points = new double[10];
         double sum = 0;
@@ -35,6 +36,7 @@ public class Main {
         }else {
             System.out.println("fault");
         }
+        System.out.println();
     }
 
     /*
@@ -43,7 +45,22 @@ public class Main {
 
      */
     private static void task49() {
+        System.out.println("task 49");
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("N = ");
+        int N = scanner.nextInt();
+        float[] array = new float[10];
+        float pr = 1;
+        System.out.println("input array: ");
+        for (int i = 0; i < N; i++) {
+           array[i]=  scanner.nextFloat();
+        }
+        for (int i = 0; i < N; i++) {
+            pr *= array[i];
+        }
 
+        System.out.println(Math.pow(Math.abs(pr),(float) 1/N));
+        System.out.println();
     }
 
     /*
