@@ -133,15 +133,36 @@ public class Main {
 
      */
     private static void task124() {
+        System.out.println("task 124");
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("N = ");
+        byte N = scanner.nextByte();
+        byte[] array = new byte[N];
 
-
-
+        byte a=0;
+        for (int i = 0; i < N; i++) {
+            array[i]=  scanner.nextByte();
+        }
+        for (byte i = 0; i < N; i++) {
+            if (array[i] == 0){
+            a+=1;
+            }
+        }
+        for (byte i = 0; i < a; i++) {
+            array[i] = 0;
+        }
+        for (byte i = a; i < N; i++) {
+            array[i] = 1;
+        }
+        for (int i = 0; i < N; i++) {
+            System.out.print(array[i]+"  ");
+        }
     }
 
     public static void main(String[] args) {
-        //task24();
-        //task49();
-        //task74();
+        task24();
+        task49();
+        task74();
         task99();
         task124();
     }
