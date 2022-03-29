@@ -1,7 +1,7 @@
 package com.company;
 
 import java.util.Scanner;
-
+import java.util.Arrays;
 /*
  * Artiukh Mihail, #2
  */
@@ -85,6 +85,7 @@ public class Main {
                 return;
             }
         }
+
         if (a==0){
             System.out.println("otsutstvuet");
         }
@@ -99,7 +100,31 @@ public class Main {
 
      */
     private static void task99() {
+        System.out.println("task99");
 
+        Scanner scanner = new Scanner(System.in);
+        float[] array = new float[10];
+        float[] newArray = new float[array.length-1 ];
+        byte a = 0;
+        System.out.println("input array: ");
+        for (int i = 0; i < 10; i++) {
+            array[i]=  scanner.nextFloat();
+        }
+
+        for (int i = 9; i >=0; i--) {
+            if (array[i]>array[0]*array[0]) {
+                a = (byte) i;
+                break;
+            }
+        }
+        if (a==0){
+            System.out.println("удаление не произведено");
+        }else {
+            System.arraycopy(array, 0, newArray, 0, a);
+            System.arraycopy(array, a + 1, newArray, a, array.length-(a+1));
+            System.out.println(   Arrays.toString(newArray));
+        }
+        System.out.println();
     }
 
     /*
@@ -115,8 +140,8 @@ public class Main {
 
     public static void main(String[] args) {
         //task24();
-        task49();
-        task74();
+        //task49();
+        //task74();
         task99();
         task124();
     }
